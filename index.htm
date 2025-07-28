@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Güncel Döviz Çevirici</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Döviz Çevirici</h1>
+        <p>Güncel kurlar ile anında çeviri yapın.</p>
+
+        <div class="converter">
+            <div class="input-group">
+                <label for="amount">Miktar</label>
+                <input type="number" id="amount" value="1" min="0">
+            </div>
+
+            <div class="currency-group">
+                <div class="from-currency">
+                    <label for="from">Kaynak Para Birimi</label>
+                    <select id="from"></select>
+                </div>
+                
+                <button id="swap-btn" title="Para Birimlerini Değiştir">
+                    &#8646;
+                </button>
+
+                <div class="to-currency">
+                    <label for="to">Hedef Para Birimi</label>
+                    <select id="to"></select>
+                </div>
+            </div>
+
+            <button id="convert-btn">Çevir</button>
+
+            <!-- Sonuç alanının üstüne ekleyin -->
+            <div id="rate-info" class="rate-info"></div>
+            <div id="result" class="result-area"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
